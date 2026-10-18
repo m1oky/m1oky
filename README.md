@@ -1,8 +1,11 @@
-## Hi, I'm a Backend & Systems Developer 💻
+<div align="center">
 
-Я фокусируюсь на создании системных утилит, автоматизации и работе с сетями. Не занимаюсь frontend-разработкой и web-дизайном. Моя цель — глубокое изучение системного программирования.
+# m1oky / Systems & Engine Developer
 
-**🛠️ Мой стек и интересы:**
-*   **Языки:** Python (скриптинг, автоматизация, CLI), изучаю C++ (высокопроизводительные системы).
-*   **ОС:** Arch Linux (повседневная работа, настройка среды, кастомизация).
-*   **Фокус:** Создание прокси-сервисов, сетевых шлюзов, консольных инструментов и системной архитектуры.
+```bash
+$ sysinfo --whoami
+  Primary Lang    : C++ (Low-Level Systems, Engine Dev)
+  Secondary Stack : Python, GDScript (Tooling, Automation, Net)
+  Editor          : Visual Studio Code
+  Environments    : Arch Linux & Windows 10
+  Interests       : System Architecture, Compilers, Networking
