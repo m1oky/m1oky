@@ -2,10 +2,12 @@
 
 # m1oky / Systems & Engine Developer
 
-```bash
-$ sysinfo --whoami
-  Primary Lang    : C++ (Low-Level Systems, Engine Dev)
-  Secondary Stack : Python, GDScript (Tooling, Automation, Net)
-  Editor          : Visual Studio Code
-  Environments    : Arch Linux & Windows 10
-  Interests       : System Architecture, Compilers, Networking
+```text
+       -`                    m1oky@archlinux
+      .o+`                   ---------------
+     `ooo/                   OS       : Arch Linux x86_64 / Windows 10
+    `+oooo:                  WM       : Hyprland (Wayland)
+   `+oooooo:                 Editor   : Visual Studio Code
+   -+oooooo+:                Primary  : C++ (Low-Level, Memory Management, Engine Architecture)
+ `/:-:++oooo+:               Second   : Python, GDScript (CLI Tooling, Automation, Net)
+`/++++/+++++++:              Focus    : Compilers, Network Protocols, Real-time Sync
