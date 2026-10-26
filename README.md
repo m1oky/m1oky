@@ -26,4 +26,10 @@
 <!-- Анимированная змейка по контрибьюциям -->
 <img src="https://raw.githubusercontent.com/m1oky/m1oky/output/github-contribution-grid-snake-dark.svg" alt="Snake" width="100%" />
 
+<div align="center">
+  <a href="https://git.io/streak-stats">
+    <img src="https://streak-stats.demolab.com?user=m1oky&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
+  </a>
+</div>
+
 </div>
