@@ -16,6 +16,10 @@
   <img src="https://skillicons.dev/icons?i=vscode,git,github&theme=dark" />
 </a>
 
+<div align="center">
+  <img src="https://img.shields.io/badge/SYSTEM-DEVELOPING-238636?style=for-the-badge&logo=github&logoColor=white&colorA=0d1117&colorB=238636" alt="System Developing" />
+</div>
+
 <br/><br/>
 
 <!-- Карточка статистики GitHub -->
