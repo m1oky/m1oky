@@ -24,7 +24,7 @@
 <br/><br/>
 
 <!-- Карточка статистики GitHub -->
-<img src="https://raw.githubusercontent.com/m1oky/m1oky/output/github-stats.svg?v=2" alt="Статистика" />
+<img src="https://raw.githubusercontent.com/m1oky/m1oky/output/github-stats.svg?v=3" alt="Статистика" />
 
 
 <br/><br/>
