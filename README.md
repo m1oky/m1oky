@@ -23,8 +23,11 @@
 
 <br/><br/>
 
-<!-- Карточка статистики GitHub -->
-<img src="https://github-readme-stats.vercel.app/api?username=m1oky&show_icons=true&locale=ru&hide_border=true&bg_color=0d1117&title_color=e10098&text_color=999999&icon_color=00e5ff&rank_icon=circle" alt="Статистика" />
+<!-- Статистика профиля (Без Vercel, стабильная загрузка) -->
+<div align="center">
+  <img src="https://komarev.com/ghpvc/?username=m1oky&style=for-the-badge&color=00ffcc&label=VIEWS&labelColor=0d1117" alt="Views" />
+  <img src="https://img.shields.io/github/followers/m1oky?style=for-the-badge&logo=github&logoColor=00e5ff&label=FOLLOWERS&labelColor=0d1117&color=e10098" alt="Followers" />
+</div>
 
 <br/><br/>
 
