@@ -1,0 +1,33 @@
+name: Generate GitHub Stats SVG
+
+on:
+  schedule:
+    - cron: "0 */6 * * *" # Обновление каждые 6 часов
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download & Overwrite Stats SVG
+        run: |
+          mkdir -p dist
+          curl -sSL --retry 3 "https://github-readme-stats.vercel.app/api?username=m1oky&show_icons=true&locale=ru&hide_border=true&bg_color=0d1117&title_color=e10098&text_color=999999&icon_color=00e5ff&rank_icon=circle" -o dist/github-stats.svg
+
+      - name: Deploy to output branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+          keep_files: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
