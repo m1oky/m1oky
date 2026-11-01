@@ -1,29 +1,38 @@
-name: Generate Snake
+name: Generate Snake and Stats
 
 on:
   schedule:
-    - cron: "0 */12 * * *"
+    - cron: "0 */6 * * *" # Автоматически каждые 6 часов
   workflow_dispatch:
   push:
     branches:
       - main
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Generate Snake Animation
-        uses: Platane/snk@v3
+      # 1. Делаем змейку
+      - name: Generate Snake SVG
+        uses: Platane/snk/svg-only@v3
         with:
           github_user_name: m1oky
           outputs: |
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
 
+      # 2. В ту же папку качаем карточку статистики
+      - name: Download Stats SVG
+        run: |
+          mkdir -p dist
+          curl -sSL "https://github-readme-stats.vercel.app/api?username=m1oky&show_icons=true&locale=ru&hide_border=true&bg_color=0d1117&title_color=e10098&text_color=999999&icon_color=00e5ff&rank_icon=circle" -o dist/github-stats.svg
+
+      # 3. Пушим оба файла вместе в ветку output
       - name: Deploy to output branch
         uses: crazy-max/ghaction-github-pages@v4
         with:
