@@ -1,0 +1,40 @@
+<svg width="495" height="195" viewBox="0 0 495 195" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .header { font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #e10098; }
+    .stat { font: 600 14px 'Segoe UI', Ubuntu, Sans-Serif; fill: #999999; }
+    .stat-val { font: 700 14px 'Segoe UI', Ubuntu, Sans-Serif; fill: #00ffcc; }
+    .icon { fill: #00e5ff; }
+    .rank-circle { stroke: #00ffcc; stroke-width: 4; fill: none; }
+    .rank-text { font: 800 24px 'Segoe UI', Ubuntu, Sans-Serif; fill: #00ffcc; }
+  </style>
+  <rect x="0.5" y="0.5" rx="10" height="99%" stroke="#30363d" width="494" fill="#0d1117" stroke-opacity="1"/>
+  <g transform="translate(25, 35)">
+    <text x="0" y="0" class="header">m1oky's GitHub Stats</text>
+    <g transform="translate(0, 20)">
+      <g transform="translate(0, 15)">
+        <path class="icon" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"/>
+        <text class="stat" x="25" y="12.5">Total Stars Earned:</text>
+        <text class="stat-val" x="195" y="12.5">24</text>
+      </g>
+      <g transform="translate(0, 45)">
+        <path class="icon" d="M11.93 8.5a4.002 4.002 0 01-7.86 0H.75a.75.75 0 010-1.5h3.32a4.002 4.002 0 017.86 0h3.32a.75.75 0 010 1.5h-3.32zM8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5z"/>
+        <text class="stat" x="25" y="12.5">Total Commits:</text>
+        <text class="stat-val" x="195" y="12.5">113</text>
+      </g>
+      <g transform="translate(0, 75)">
+        <path class="icon" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8z"/>
+        <text class="stat" x="25" y="12.5">Repositories:</text>
+        <text class="stat-val" x="195" y="12.5">8</text>
+      </g>
+      <g transform="translate(0, 105)">
+        <path class="icon" d="M5.5 3.5a2 2 0 100 4 2 2 0 000-4zM2 5.5a3.5 3.5 0 115.898 2.549 5.507 5.507 0 013.034 4.084.75.75 0 11-1.482.235 4.001 4.001 0 00-7.9 0 .75.75 0 01-1.482-.236A5.507 5.507 0 013.102 8.05 3.49 3.49 0 012 5.5z"/>
+        <text class="stat" x="25" y="12.5">Followers:</text>
+        <text class="stat-val" x="195" y="12.5">5</text>
+      </g>
+    </g>
+    <g transform="translate(375, 60)">
+      <circle cx="35" cy="35" r="35" class="rank-circle"/>
+      <text x="35" y="44" text-anchor="middle" class="rank-text">C+</text>
+    </g>
+  </g>
+</svg>
