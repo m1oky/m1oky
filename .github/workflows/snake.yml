@@ -27,7 +27,7 @@ jobs:
           outputs: |
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=#00ff9d&color_dots=#161b22,#0e4429,#006d32,#26a641,#39d353
 
-      # 2. Генерация точной неоновой карточки статистики через GraphQL API
+      # 2. Генерация честной статистики по официальной формуле github-readme-stats
       - name: Generate Custom Neon Stats SVG
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -35,7 +35,7 @@ jobs:
         run: |
           mkdir -p dist
           python3 - << 'EOF'
-          import os, urllib.request, json
+          import os, urllib.request, json, math
 
           token = os.environ["GH_TOKEN"]
           user = os.environ["USERNAME"]
@@ -51,6 +51,9 @@ jobs:
               contributionsCollection {
                 totalCommitContributions
                 restrictedContributionsCount
+                totalPullRequestContributions
+                totalIssueContributions
+                totalPullRequestReviewContributions
               }
             }
           }
@@ -72,19 +75,44 @@ jobs:
           stars = sum(repo["stargazerCount"] for repo in data["repositories"]["nodes"])
           repos = data["repositories"]["totalCount"]
           followers = data["followers"]["totalCount"]
-          commits = (
-              data["contributionsCollection"]["totalCommitContributions"]
-              + data["contributionsCollection"]["restrictedContributionsCount"]
-          )
+          cc = data["contributionsCollection"]
+          commits = cc["totalCommitContributions"] + cc["restrictedContributionsCount"]
+          prs = cc["totalPullRequestContributions"]
+          issues = cc["totalIssueContributions"]
+          reviews = cc["totalPullRequestReviewContributions"]
 
-          # Расчет ранга
-          score = commits * 1.5 + stars * 10 + repos * 5 + followers * 3
-          if score >= 1500: rank, dash = "S+", 220
-          elif score >= 800: rank, dash = "S", 200
-          elif score >= 450: rank, dash = "A+", 180
-          elif score >= 250: rank, dash = "A", 160
-          elif score >= 120: rank, dash = "B+", 135
-          else: rank, dash = "B", 110
+          # Официальная формула ранжирования github-readme-stats (CDF)
+          def exp_cdf(x):
+              return 1 - (2 ** (-x))
+
+          def log_normal_cdf(x):
+              return x / (1 + x)
+
+          # Медианы и веса из github-readme-stats
+          total_weight = 2 + 3 + 1 + 1 + 4 + 1 # = 12
+          score = (
+              2 * exp_cdf(commits / 250) +
+              3 * exp_cdf(prs / 50) +
+              1 * exp_cdf(issues / 25) +
+              1 * exp_cdf(reviews / 2) +
+              4 * log_normal_cdf(stars / 50) +
+              1 * log_normal_cdf(followers / 10)
+          ) / total_weight
+
+          percentile = (1 - score) * 100
+
+          if percentile <= 1: rank = "S"
+          elif percentile <= 12.5: rank = "A+"
+          elif percentile <= 25: rank = "A"
+          elif percentile <= 37.5: rank = "A-"
+          elif percentile <= 50: rank = "B+"
+          elif percentile <= 62.5: rank = "B"
+          elif percentile <= 75: rank = "B-"
+          elif percentile <= 87.5: rank = "C+"
+          else: rank = "C"
+
+          # Длина дуги круга (окружность = 251.2) пропорциональна реальному процентилю
+          dash = round(score * 251.2, 1)
 
           svg = f'''<svg width="495" height="195" viewBox="0 0 495 195" fill="none" xmlns="http://www.w3.org/2000/svg">
             <defs>
@@ -126,7 +154,7 @@ jobs:
             <g transform="translate(400, 102)">
               <circle cx="0" cy="0" r="40" stroke="#1f2937" stroke-width="6" fill="none"/>
               <circle cx="0" cy="0" r="40" stroke="#00ff9d" stroke-width="6" fill="none"
-                      stroke-dasharray="{dash} 251" stroke-linecap="round" transform="rotate(-90)" filter="url(#glow)"/>
+                      stroke-dasharray="{dash} 251.2" stroke-linecap="round" transform="rotate(-90)" filter="url(#glow)"/>
               <text x="0" y="9" text-anchor="middle" fill="#00ff9d" font-family="'Segoe UI', Ubuntu, Sans-Serif"
                     font-size="24" font-weight="800" filter="url(#glow)">{rank}</text>
             </g>
