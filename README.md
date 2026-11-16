@@ -23,14 +23,11 @@
 
 <br/><br/>
 
-<!-- Карточка статистики GitHub -->
-<img src="https://raw.githubusercontent.com/m1oky/m1oky/output/github-stats.svg?v=3" alt="Статистика" />
-
-
-<br/><br/>
-
-<!-- Анимированная змейка по контрибьюциям -->
-<img src="https://raw.githubusercontent.com/m1oky/m1oky/output/github-contribution-grid-snake-dark.svg" alt="Snake" width="100%" />
+<div align="center">
+  <img src="https://raw.githubusercontent.com/m1oky/m1oky/output/stats.svg" alt="m1oky's GitHub Stats" />
+  <br /><br />
+  <img src="https://raw.githubusercontent.com/m1oky/m1oky/output/github-contribution-grid-snake-dark.svg" alt="Snake animation" />
+</div>
 
 <div align="center">
   <a href="https://git.io/streak-stats">
