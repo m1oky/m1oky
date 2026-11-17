@@ -138,16 +138,16 @@ jobs:
             </text>
 
             <g transform="translate(25, 68)" font-family="'Segoe UI', Ubuntu, Sans-Serif" font-size="14">
-              <text x="0" y="0" fill="#a9fef7" font-weight="600">★ Total Stars Earned:</text>
+              <text x="0" y="0" fill="#a9fef7" font-weight="600"> Total Stars Earned:</text>
               <text x="195" y="0" fill="#00ff9d" font-weight="700">{stars}</text>
 
-              <text x="0" y="28" fill="#a9fef7" font-weight="600">⚡ Total Commits (1Y):</text>
+              <text x="0" y="28" fill="#a9fef7" font-weight="600"> Total Commits (1Y):</text>
               <text x="195" y="28" fill="#00ff9d" font-weight="700">{commits}</text>
 
-              <text x="0" y="56" fill="#a9fef7" font-weight="600">📦 Repositories:</text>
+              <text x="0" y="56" fill="#a9fef7" font-weight="600"> Repositories:</text>
               <text x="195" y="56" fill="#00ff9d" font-weight="700">{repos}</text>
 
-              <text x="0" y="84" fill="#a9fef7" font-weight="600">👥 Followers:</text>
+              <text x="0" y="84" fill="#a9fef7" font-weight="600"> Followers:</text>
               <text x="195" y="84" fill="#00ff9d" font-weight="700">{followers}</text>
             </g>
 
