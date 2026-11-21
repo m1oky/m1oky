@@ -1,0 +1,45 @@
+<svg width="495" height="195" viewBox="0 0 495 195" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-grad" x1="0" y1="0" x2="495" y2="195" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#141321"/>
+    </linearGradient>
+    <linearGradient id="border-grad" x1="0" y1="0" x2="495" y2="195" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ff007f"/>
+      <stop offset="50%" stop-color="#7928ca"/>
+      <stop offset="100%" stop-color="#00ff9d"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <rect x="1" y="1" width="493" height="193" rx="12" fill="url(#bg-grad)" stroke="url(#border-grad)" stroke-width="1.5"/>
+
+  <text x="25" y="38" fill="#ff007f" font-family="'Segoe UI', Ubuntu, Sans-Serif" font-size="18" font-weight="700" filter="url(#glow)">
+    m1oky's GitHub Stats
+  </text>
+
+  <g transform="translate(25, 68)" font-family="'Segoe UI', Ubuntu, Sans-Serif" font-size="14">
+    <text x="0" y="0" fill="#a9fef7" font-weight="600"> Total Stars Earned:</text>
+    <text x="195" y="0" fill="#00ff9d" font-weight="700">24</text>
+
+    <text x="0" y="28" fill="#a9fef7" font-weight="600"> Total Commits (1Y):</text>
+    <text x="195" y="28" fill="#00ff9d" font-weight="700">161</text>
+
+    <text x="0" y="56" fill="#a9fef7" font-weight="600"> Repositories:</text>
+    <text x="195" y="56" fill="#00ff9d" font-weight="700">9</text>
+
+    <text x="0" y="84" fill="#a9fef7" font-weight="600"> Followers:</text>
+    <text x="195" y="84" fill="#00ff9d" font-weight="700">4</text>
+  </g>
+
+  <g transform="translate(400, 102)">
+    <circle cx="0" cy="0" r="40" stroke="#1f2937" stroke-width="6" fill="none"/>
+    <circle cx="0" cy="0" r="40" stroke="#00ff9d" stroke-width="6" fill="none"
+            stroke-dasharray="49.6 251.2" stroke-linecap="round" transform="rotate(-90)" filter="url(#glow)"/>
+    <text x="0" y="9" text-anchor="middle" fill="#00ff9d" font-family="'Segoe UI', Ubuntu, Sans-Serif"
+          font-size="24" font-weight="800" filter="url(#glow)">C+</text>
+  </g>
+</svg>
