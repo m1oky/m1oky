@@ -1,6 +1,6 @@
 <div align="center">
 
-# m1oky / low-level & systems dev
+# m1oky / low-level & systems dev / ЛОХ ЕБАННЫЙ КОТОРЫЙ ПИШЕТ НА SCRATCH
 
 <div align="center">
   <img src="https://img.shields.io/badge/STATUS-ONLINE-00ffcc?style=for-the-badge&logo=icloud&logoColor=white&colorA=161b22&colorB=00b359" alt="Status" />
